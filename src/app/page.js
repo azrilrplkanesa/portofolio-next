@@ -9,18 +9,10 @@ const skills = [
   { nama: "JavaScript", level: "Dasar" },
 ];
 
-const dataJadwal = [
-  { hari: "Senin", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
-  {
-    hari: "Selasa",
-    waktu: "19.00 - 21.00",
-    kegiatan: "Mengerjakan tugas praktik",
-  },
-  {
-    hari: "Rabu",
-    waktu: "19.30 - 20.30",
-    kegiatan: "Merekam video dan menulis laporan",
-  },
+const jadwalBelajar = [
+  { hari: "Senin", waktu: "19.00-20.00", kegiatan: "Membaca Ulang Membaca"},
+  { hari: "Selasa", waktu: "19.00-21.00", kegiatan: "Mengerjakan Tugas Praktik"},
+  { hari: "Rabu", waktu: "19.30-20.30", kegiatan: "Merekam Video Dan Menulis Laporan"},
 ];
 
 export default function Home() {
@@ -29,15 +21,18 @@ export default function Home() {
       <div className="mx-auto max-w-3xl space-y-6">
         <Hero
           nama="Muhammad Resyan Azril Pratama"
-          tagline="Siswa kelas X SMK, calon Junior Web Developer di Kelas Industri UBIG"
+          tagline="Siswa Kelas X SMK, calon junior Web Developer di Kelas Industri"
         />
 
-        <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+        <section
+          id="tentang"
+          className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+        >
           <h2 className="mb-2 text-xl font-bold text-gray-900">Tentang Saya</h2>
           <p className="text-sm leading-relaxed text-gray-600">
-            Saya tinggal di Malang dan senang mencoba hal baru di dunia
-            teknologi. Saya ingin bisa membuat website yang bermanfaat untuk
-            sekolah dan UMKM di sekitar rumah.
+            Saya Tinggal Di Malang Dan Senang Mencoba Hal Baru di Dunia
+            Teknologi. Saya Ingin Bisa Membuat Website Yang Bermanfaat Untuk
+            Sekolah Dan UMKM Di Sekitar Rumah.
           </p>
         </section>
 
@@ -47,7 +42,7 @@ export default function Home() {
             <ul className="list-inside list-disc space-y-1 text-sm text-gray-600">
               <li>Bermain Sepak Bola</li>
               <li>Bermain Game</li>
-              <li>Mengoding</li>
+              <li>Running</li>
             </ul>
           </section>
 
@@ -62,12 +57,16 @@ export default function Home() {
             </p>
             <ol className="list-inside list-decimal space-y-1 text-sm text-gray-600">
               <li>Menuntaskan Kelas Industri UBIG</li>
-              <li>Bekerja sebagai Web Developer</li>
+              <li>Bekerja Sebagai Web Developer</li>
+              <li>Magang Di Perusahaan Teknologi</li>
             </ol>
           </section>
         </div>
 
-        <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+        <section
+          id="keahlian"
+          className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+        >
           <h2 className="mb-4 text-xl font-bold text-gray-900">Keahlian</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {skills.map((skill) => (
@@ -94,7 +93,7 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 text-gray-600">
-                {dataJadwal.map((item) => (
+                {jadwalBelajar.map((item) => (
                   <tr
                     key={item.hari}
                     className="transition-colors hover:bg-gray-50"
